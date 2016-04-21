@@ -10,7 +10,7 @@ import java.io.Console;
  */
 public class QuickSort {
 
-    public static int[] unsort = {5, 1, 7, 11, 3, 9, 0};
+    private static int[] unsort = {5, 1, 7, 11, 3, 9, 0};
     /**
      * 把划分的结果进行递归排序
      * @param unsort 未排序数组

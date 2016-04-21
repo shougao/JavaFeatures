@@ -1,5 +1,6 @@
 package test.sort;
 
+import test.sort.bubblesort.BubbleSort;
 import test.sort.quicksort.QuickSort;
 
 /**
@@ -8,8 +9,11 @@ import test.sort.quicksort.QuickSort;
 public class SortManager {
 
 
-    public void quickSortTest(){
+    public void sortTest(){
         QuickSort quickSort = new QuickSort();
         quickSort.test();
+
+        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort.test();
     }
 }

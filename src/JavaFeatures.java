@@ -51,7 +51,7 @@ public class JavaFeatures {
         computeManager.startTest();
 
         SortManager sortManager = new SortManager();
-        sortManager.quickSortTest();
+        sortManager.sortTest();
 
         //泛型， 任何类型都能处理， 处理时确定类型， 而不是在类内部之前定义好的类型。
         GenericsManager mGenericsManager = new GenericsManager();
