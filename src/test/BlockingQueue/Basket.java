@@ -4,7 +4,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * 存放产品的篮子，用于生产消费
+ * 存放产品的篮子，用于生产消费，篮子里的BlockingQueue保证了生产消费的同步。
  * Created by qingcai.zqc on 2016/4/20.
  */
 public class Basket {

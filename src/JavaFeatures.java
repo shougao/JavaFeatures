@@ -4,6 +4,7 @@ import test.deadlock.DeadLock;
 import test.designpatterns.PatternManager;
 import test.generics.GenericsManager;
 import test.hashmap.HashMapTest;
+import test.sort.SortManager;
 import test.threadbasefunc.ThreadFuncTest;
 import test.threadlocal.ThreadLocalTest;
 
@@ -48,6 +49,9 @@ public class JavaFeatures {
         //计算、算法类
         ComputeManager computeManager = new ComputeManager();
         computeManager.startTest();
+
+        SortManager sortManager = new SortManager();
+        sortManager.quickSortTest();
 
         //泛型， 任何类型都能处理， 处理时确定类型， 而不是在类内部之前定义好的类型。
         GenericsManager mGenericsManager = new GenericsManager();
