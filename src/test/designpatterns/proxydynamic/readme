@@ -1,0 +1,5 @@
+动态代理是使用了java的Proxy类， InvocationHandler类。
+通过Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                  target.getClass().getInterfaces(), this);
+                  产生一给代理实例。
+然后在invoke回调执行中，执行实现。

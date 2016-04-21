@@ -1,0 +1,16 @@
+# Java class files
+*.class
+
+# Generated files
+bin/
+out/
+
+
+
+# idea files
+*.ipr
+*.iws
+.idea/
+
+# Log Files
+*.log
