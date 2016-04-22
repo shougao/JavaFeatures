@@ -1,8 +1,9 @@
 package test.designpatterns;
 
+import test.designpatterns.factory.FactoryTest;
 import test.designpatterns.proxydynamic.DynamicWorkerTest;
 import test.designpatterns.proxystatic.StaticWorkerTest;
-import test.designpatterns.singleinstance.SingleInstanceTest;
+import test.designpatterns.singleinstance.SingleInstanceDemo;
 
 /**
  * 所有设计模式包的测试入口类。
@@ -22,8 +23,11 @@ public class PatternManager {
         DynamicWorkerTest dynamicWorkerTest = new DynamicWorkerTest();
         dynamicWorkerTest.test();
 
-        SingleInstanceTest instanceTest = new SingleInstanceTest();
+        SingleInstanceDemo instanceTest = new SingleInstanceDemo();
         instanceTest.test();
+
+        FactoryTest factoryTest = new FactoryTest();
+        factoryTest.test();
     }
 
 
