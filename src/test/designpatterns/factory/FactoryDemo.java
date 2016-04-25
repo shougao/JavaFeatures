@@ -18,7 +18,7 @@ package test.designpatterns.factory;
 public class FactoryDemo {
 
     /**
-     * 抽象工厂， 生产抽象产品用。
+     * 工厂， 生产产品用。
      */
     public interface IFactory{
         public ILight produce();
@@ -75,12 +75,10 @@ public class FactoryDemo {
 
     public void test(){
         System.out.println("\n");
-        lightTest(new XFactory().produce());
-        lightTest(new YFactory().produce());
+        ILight light1 = new XFactory().produce();
+        ILight light2 = new YFactory().produce();
+        light1.turnOn();
+        light1.turnOff();
     }
 
-    public void lightTest(ILight light){
-        light.turnOn();
-        light.turnOff();
-    }
 }

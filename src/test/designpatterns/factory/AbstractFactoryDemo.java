@@ -11,13 +11,23 @@ package test.designpatterns.factory;
  */
 public class AbstractFactoryDemo {
 
-    //抽象工厂， 产品部分和之前工厂一致======================================
+    public interface IAbstractFactory{
+        public ILight produce();
+        public INewLight produceNew();
+    }
 
     /**
-     * 抽象工厂， 生产抽象产品用。
+     * 工厂， 生产产品用。
      */
     public interface IFactory{
         public ILight produce();
+    }
+
+    /**
+     * 新增工厂， 生产产品用。
+     */
+    public interface INewFactory{
+        public INewLight produce();
     }
 
     /**
@@ -29,9 +39,17 @@ public class AbstractFactoryDemo {
     }
 
     /**
+     * 新增产品
+     */
+    public interface INewLight{
+        public void turnOn();
+        public void turnOff();
+    }
+
+    /**
      * 具体产品
      */
-    public class ALight implements FactoryDemo.ILight {
+    public class ALight implements ILight {
         @Override
         public void turnOff() {
             System.out.println("ALight off");
@@ -43,7 +61,7 @@ public class AbstractFactoryDemo {
         }
     }
 
-    public class BLight implements FactoryDemo.ILight {
+    public class BLight implements ILight {
         @Override
         public void turnOff() {
             System.out.println("BLight off");
@@ -54,7 +72,68 @@ public class AbstractFactoryDemo {
             System.out.println("BLight on");
         }
     }
-    //产品部分和之前工厂一致======================================
+
+    /**
+     * 具体新产品
+     */
+    public class ANewLight implements INewLight {
+        @Override
+        public void turnOff() {
+            System.out.println("ANewLight off");
+        }
+
+        @Override
+        public void turnOn() {
+            System.out.println("ANewLight on");
+        }
+    }
+
+    public class BNewLight implements INewLight {
+        @Override
+        public void turnOff() {
+            System.out.println("BNewLight off");
+        }
+
+        @Override
+        public void turnOn() {
+            System.out.println("BNewLight on");
+        }
+    }
+
+    public class FactoryImpl implements IFactory{
+        @Override
+        public ILight produce() {
+            return new ALight();//TODO:或者返回BLight
+        }
+    }
+
+    public class NewFactoryImpl implements INewFactory{
+        @Override
+        public INewLight produce() {
+            return new ANewLight();//TODO:或者返回BNewLight
+        }
+    }
+
+    public class AbstractFactoryImpl implements IAbstractFactory{
+
+        @Override
+        public ILight produce() {
+            return null;
+        }
+
+        @Override
+        public INewLight produceNew() {
+            return null;
+        }
+    }
+
+    public void test(){
+        System.out.println("\n");
+        NewFactoryImpl newFactory = new NewFactoryImpl();
+        INewLight newLight = newFactory.produce();
+        newLight.turnOn();
+        newLight.turnOff();
+    }
 
 
 

@@ -7,5 +7,6 @@ public class FactoryTest {
 
     public void test(){
         new FactoryDemo().test();
+        new AbstractFactoryDemo().test();
     }
 }

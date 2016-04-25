@@ -23,13 +23,13 @@ public class InsertSort {
         for(int i=1; i<unsort.length; i++){
             for(int j=0; j<i; j++){
                 if(unsort[j] > unsort[i]){
-                    int temp = unsort[i];
-                    //把元素后移一个。
-                    int x=j;
-                    for(; x<i-j; x++){
-                        unsort[i+x] = unsort[i+x-1];
-                    }
-                    unsort[i+x-1] = temp;
+//                    int temp = unsort[i];
+//                    //把元素后移一个。
+//                    int x=j;
+//                    for(; x<i-j; x++){
+//                        unsort[i+x] = unsort[i+x-1];
+//                    }
+//                    unsort[i+x-1] = temp;
                 }
             }
         }
